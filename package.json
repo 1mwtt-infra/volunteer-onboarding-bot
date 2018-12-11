@@ -1,0 +1,56 @@
+{
+  "name": "volunteer-onboarding-bot",
+  "version": "1.0.0",
+  "description": "An app to guide new 1 Million Women To Tech volunteers to be set up for success!",
+  "author": "Virginia Balseiro <virginiabalseiro@gmail.com>",
+  "license": "ISC",
+  "repository": "https://github.com//volunteer-onboarding-bot.git",
+  "homepage": "https://github.com//volunteer-onboarding-bot",
+  "bugs": "https://github.com//volunteer-onboarding-bot/issues",
+  "keywords": [
+    "probot",
+    "github",
+    "probot-app"
+  ],
+  "scripts": {
+    "dev": "nodemon",
+    "start": "probot run ./index.js",
+    "lint": "standard --fix",
+    "test": "jest && standard",
+    "test:watch": "jest --watch --notify --notifyMode=change --coverage"
+  },
+  "dependencies": {
+    "@octokit/rest": "^16.0.1",
+    "probot": "^7.4.0",
+    "pug": "^2.0.3",
+    "jstransformer-markdown-it": "^2.1.0",
+    "file-system": "^2.2.2",
+    "request-promise": "^4.2.2",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "jest": "^22.4.3",
+    "nock": "^10.0.0",
+    "nodemon": "^1.17.2",
+    "smee-client": "^1.0.2",
+    "standard": "^10.0.3"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "nodemonConfig": {
+    "exec": "npm start",
+    "watch": [
+      ".env",
+      "."
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
